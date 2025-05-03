@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+  namespace: argocd
+spec:
+  source:
+    chart: argo-cd
+    repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
+    path: env/dev/argocd/cluster-resource
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: argo-cd
