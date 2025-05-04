@@ -4,3 +4,6 @@ kind: Kustomization
 resources:
   - ./istio-base
   - ./istiod
+
+patches:
+  - path: patch/ns.yaml
