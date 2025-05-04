@@ -32,6 +32,7 @@ spec:
               mountPath: /tmp
             - name: wlp-output
               mountPath: /opt/ibm/wlp/output
+          resources: {}
       volumes:
         - name: wlp-output
           emptyDir: {}
