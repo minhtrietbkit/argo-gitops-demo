@@ -3,8 +3,6 @@ kind: ConfigMap
 metadata:
   name: argocd-cm
 data:
-  resource.customizations: |
-    admissionregistration.k8s.io/MutatingWebhookConfiguration:
-      ignoreDifferences: |
-        jsonPointers:
-        - /webhooks/0/clientConfig/caBundle
+  resource.customizations.ignoreDifferences.admissionregistration.k8s.io_MutatingWebhookConfiguration: |
+    jqPathExpressions:
+    - '.webhooks[]?.clientConfig.caBundle'
