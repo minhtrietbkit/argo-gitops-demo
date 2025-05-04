@@ -13,7 +13,7 @@ spec:
     server: "https://kubernetes.default.svc"
     namespace: default
   syncPolicy:
-    automated: {}
+    automated:
+      allowEmpty: true
     syncOptions:
       - ServerSideApply=true
-      - allowEmpty: true
