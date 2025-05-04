@@ -2,7 +2,7 @@ kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
 
 resources:
-  - argocd
-  - calico
-  - istio
-  - bookinfo
+  - argocd/Application.yaml
+  - calico/Application.yaml
+  - istio/Application.yaml
+  - bookinfo/Application.yaml
