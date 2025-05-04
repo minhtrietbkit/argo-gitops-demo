@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: review
+  name: details
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
     targetRevision: HEAD
-    path: helm-charts/reviews
+    path: helm-charts/details
   destination:
     server: "https://kubernetes.default.svc"
     namespace: default
@@ -16,3 +16,4 @@ spec:
     automated: {}
     syncOptions:
       - ServerSideApply=true
+      - allowEmpty: true
