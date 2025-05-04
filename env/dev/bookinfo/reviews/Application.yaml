@@ -16,3 +16,4 @@ spec:
     automated: {}
     syncOptions:
       - ServerSideApply=true
+      - allowEmpty: true
