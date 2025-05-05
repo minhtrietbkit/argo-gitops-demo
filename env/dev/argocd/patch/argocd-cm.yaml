@@ -3,9 +3,12 @@ kind: ConfigMap
 metadata:
   name: argocd-cm
 data:
+  # Fix issue out of sync
   resource.customizations.ignoreDifferences.admissionregistration.k8s.io_MutatingWebhookConfiguration: |
     jqPathExpressions:
     - '.webhooks[]?.clientConfig.caBundle'
   resource.customizations.ignoreDifferences.admissionregistration.k8s.io_ValidatingWebhookConfiguration: |
     jqPathExpressions:
     - '.webhooks[]?.clientConfig.caBundle'
+  # Enable kustomize to build helm charts
+  kustomize.buildOptions: --enable-helm
