@@ -9,3 +9,6 @@ helmCharts:
     repo: https://istio-release.storage.googleapis.com/charts
     version: 1.25.2
     namespace: istio-system
+
+patches:
+  - path: ./patch/ns.yaml
