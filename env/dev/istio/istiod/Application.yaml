@@ -13,6 +13,6 @@ spec:
     server: "https://kubernetes.default.svc"
     namespace: istio-system
   syncPolicy:
-    #automated: {}
+    automated: {}
     syncOptions:
       - ServerSideApply=true
