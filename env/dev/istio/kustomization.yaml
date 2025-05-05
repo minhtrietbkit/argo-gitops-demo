@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - ./istio-base/Application.yaml
   - ./istiod/Application.yaml
-  - ./istio-gw/Application.yaml
+  - ./istio-ingressgateway/Application.yaml

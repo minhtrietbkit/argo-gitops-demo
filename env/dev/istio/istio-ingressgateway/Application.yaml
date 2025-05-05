@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
     targetRevision: HEAD
-    path: env/dev/istio/istio-gw
+    path: env/dev/istio/istio-ingressgateway
   destination:
     server: "https://kubernetes.default.svc"
     namespace: istio-ingress
