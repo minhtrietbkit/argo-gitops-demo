@@ -6,7 +6,7 @@ spec:
   hosts:
     - "productpage.172.18.1.1.nip.io"
   gateways:
-    - istio-shared-ingressgateway
+    - istio-ingress/istio-shared-ingressgateway
   http:
     - route:
         - destination:
