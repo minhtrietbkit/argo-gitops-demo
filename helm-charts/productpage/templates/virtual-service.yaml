@@ -4,7 +4,7 @@ metadata:
   name: productpage
 spec:
   hosts:
-    - "productpage.172.18.1.0.nip.io"
+    - "productpage.172.18.1.1.nip.io"
   gateways:
     - istio-shared-ingressgateway
   http:
