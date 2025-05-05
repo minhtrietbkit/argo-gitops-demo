@@ -7,8 +7,8 @@ spec:
   project: default
   source:
     repoURL: https://istio-release.storage.googleapis.com/charts
-    chart: base
-    targetRevision: 1.25.2
+    targetRevision: HEAD
+    path: env/dev/istio/istio-base
   destination:
     server: "https://kubernetes.default.svc"
     namespace: istio-system
