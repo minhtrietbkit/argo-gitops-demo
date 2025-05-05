@@ -3,4 +3,10 @@ kind: Kustomization
 
 resources:
   - ./ns.yaml
-  - ./Application.yaml
+
+helmCharts:
+  - name: gateway
+    repo: https://istio-release.storage.googleapis.com/charts
+    version: 1.25.2
+    namespace: istio-ingress
+    releaseName: istio-gw
