@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: istiod
+  name: istiod-refactor
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://istio-release.storage.googleapis.com/charts
-    chart: istiod
-    targetRevision: 1.25.2
+    repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
+    targetRevision: HEAD
+    path: env/dev/istio/istiod
   destination:
     server: "https://kubernetes.default.svc"
     namespace: istio-system
   syncPolicy:
-    automated: {}
+    #automated: {}
     syncOptions:
       - ServerSideApply=true
