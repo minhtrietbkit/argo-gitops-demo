@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bookinfo
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
+    targetRevision: HEAD
+    path: env/dev/app/bookinfo
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: default
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - ServerSideApply=true
