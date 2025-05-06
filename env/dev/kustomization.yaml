@@ -5,5 +5,4 @@ resources:
   - infra/Application.yaml
   - argocd/Application.yaml
   - app/Application.yaml
-  - bookinfo/Application.yaml
 
