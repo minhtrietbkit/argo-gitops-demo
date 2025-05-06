@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: service1
+  namespace: argocd
+spec:
+  project: default
+  sources:
+    - repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
+      targetRevision: HEAD
+      path: helm-charts/service_1
+      helm:
+        valueFiles:
+          - $values/env/dev/env.yaml
+    - repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
+      targetRevision: HEAD
+      ref: values
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: default
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - ServerSideApply=true
