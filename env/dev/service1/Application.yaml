@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
+  sources:
     - repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
       targetRevision: HEAD
       path: helm-charts/service_1
