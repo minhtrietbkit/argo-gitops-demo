@@ -4,7 +4,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 resources:
   - calico/Application.yaml
   - metallb/Application.yaml
-#  - istio/Application.yaml
+  - istio/Application.yaml
 #  - bookinfo/Application.yaml
 #  - service1/Application.yaml
 #  - service2/Application.yaml
