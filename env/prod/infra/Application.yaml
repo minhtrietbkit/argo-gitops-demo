@@ -11,8 +11,7 @@ spec:
     path: env/prod/infra
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: argocd
   syncPolicy:
-    #automated: {}
+    automated: {}
     syncOptions:
       - ServerSideApply=true
