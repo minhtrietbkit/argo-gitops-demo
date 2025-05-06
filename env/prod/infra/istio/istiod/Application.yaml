@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
     targetRevision: HEAD
-    path: env/dev/infra/istio/istiod
+    path: env/prod/infra/istio/istiod
   destination:
     server: "https://172.18.0.7:6443"
     namespace: istio-system

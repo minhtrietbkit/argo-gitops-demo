@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
     targetRevision: HEAD
-    path: env/dev/app
+    path: env/prod/app
   destination:
     server: "https://172.18.0.7:6443"
     namespace: argocd

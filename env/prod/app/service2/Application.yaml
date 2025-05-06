@@ -11,7 +11,7 @@ spec:
       path: helm-charts/service_2
       helm:
         valueFiles:
-          - $values/env/dev/env.yaml
+          - $values/env/prod/env.yaml
     - repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
       targetRevision: HEAD
       ref: values
