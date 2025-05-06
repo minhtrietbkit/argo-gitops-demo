@@ -7,3 +7,4 @@ resources:
   - metallb/Application.yaml
   - istio/Application.yaml
   - bookinfo/Application.yaml
+  - service1/Application.yaml
