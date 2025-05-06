@@ -2,6 +2,7 @@ kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
 
 resources:
+  - infra/Application.yaml
   - argocd/Application.yaml
   - calico/Application.yaml
   - metallb/Application.yaml
@@ -9,3 +10,4 @@ resources:
   - bookinfo/Application.yaml
   - service1/Application.yaml
   - service2/Application.yaml
+
