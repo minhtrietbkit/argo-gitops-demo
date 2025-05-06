@@ -10,7 +10,7 @@ spec:
     targetRevision: HEAD
     path: env/prod/infra/istio
   destination:
-    server: "https://172.18.0.7:6443"
+    server: "https://kubernetes.default.svc"
     namespace: argocd
   syncPolicy:
     automated: {}
