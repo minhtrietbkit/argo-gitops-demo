@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
     targetRevision: HEAD
-    path: helm-charts/service1
+    path: helm-charts/service_1
     helm:
       valueFiles:
         - ../env.yaml
