@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: service2
+  labels:
+    app: service2
+data:
+  SERVICE_2_ENV_VAR_1: "{{.Values.data.SERVICE_2_ENV_VAR_1}}"
+  SERVICE_2_ENV_VAR_2: "{{.Values.data.SERVICE_2_ENV_VAR_2}}"
+  SERVICE_2_ENV_VAR_3: "{{.Values.data.SERVICE_2_ENV_VAR_3}}"
