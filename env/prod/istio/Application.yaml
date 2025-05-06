@@ -10,7 +10,8 @@ spec:
     targetRevision: HEAD
     path: env/prod/istio
   destination:
-    server: .*
+    server: "https://172.18.0.7:6443"
+    namespace: argocd
   syncPolicy:
     automated: {}
     syncOptions:
