@@ -8,3 +8,4 @@ resources:
   - istio/Application.yaml
   - bookinfo/Application.yaml
   - service1/Application.yaml
+  - service2/Application.yaml
