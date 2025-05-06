@@ -2,3 +2,4 @@ data:
   SERVICE_2_ENV_VAR_1: svc_2_default_env_var1
   SERVICE_2_ENV_VAR_2: svc_2_default_env_var2
   SERVICE_2_ENV_VAR_3: svc_2_default_env_var3
+  SERVICE_2_ENV_VAR_4: svc_2_default_env_var4
