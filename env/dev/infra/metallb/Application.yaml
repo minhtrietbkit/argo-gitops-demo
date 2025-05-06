@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: calico
+  name: metallb
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
     targetRevision: HEAD
-    path: env/dev/calico
+    path: env/dev/infra/metallb
   destination:
     server: "https://kubernetes.default.svc"
     namespace: argocd
