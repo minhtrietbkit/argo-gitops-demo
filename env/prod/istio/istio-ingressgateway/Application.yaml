@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: istio-ingressgateway
+  name: prod-istio-ingressgateway
   namespace: argocd
 spec:
   project: default
