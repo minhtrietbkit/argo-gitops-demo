@@ -1,5 +1,5 @@
 {
-  "name": "details",
+  "name": "reviews",
   "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
   "targetRevision": "HEAD",
   "path": "helm-charts/reviews",
