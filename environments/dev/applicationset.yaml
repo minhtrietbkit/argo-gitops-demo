@@ -12,14 +12,14 @@ spec:
               repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
               revision: HEAD
               files:
-                - path: environments/dev/cluster1/clusterconfig.json
+                - path: environments/dev/**/clusterconfig.json
               pathParamPrefix: cluster
           # Service-level config, which includes clusterName to match
           - git:
               repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
               revision: HEAD
               files:
-                - path: environments/dev/cluster1/service*config.json
+                - path: '{{.cluster.path.path}}/service*config.json'
   template:
     metadata:
       name: '{{clusterName}}-{{name}}'
