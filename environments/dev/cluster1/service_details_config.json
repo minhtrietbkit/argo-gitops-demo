@@ -1,8 +1,8 @@
 {
-  "name": "details",
+  "serviceName": "details",
   "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
   "targetRevision": "HEAD",
-  "path": "helm-charts/details",
+  "manifestsPath": "helm-charts/details",
   "namespace": "default",
   "valueFilePath": "$values/environments/dev/cluster1/env.yaml",
   "valueFileRepo": "https://github.com/minhtrietbkit/argo-gitops-demo",

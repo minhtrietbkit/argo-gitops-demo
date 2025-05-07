@@ -1,8 +1,8 @@
 {
-  "name": "reviews",
+  "serviceName": "reviews",
   "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
   "targetRevision": "HEAD",
-  "path": "helm-charts/reviews",
+  "manifestsPath": "helm-charts/reviews",
   "namespace": "default",
   "valueFilePath": "$values/environments/dev/cluster1/env.yaml",
   "valueFileRepo": "https://github.com/minhtrietbkit/argo-gitops-demo",
