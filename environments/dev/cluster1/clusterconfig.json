@@ -1,0 +1,4 @@
+{
+  "clusterHost": "https://172.18.0.5:6443",
+  "clusterName": "dev-1"
+}
