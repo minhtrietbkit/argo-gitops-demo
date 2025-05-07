@@ -5,23 +5,20 @@ metadata:
   namespace: argocd
 spec:
   generators:
-    - merge:
-        mergeKeys:
-          - clusterName
-          - clusterHost
+    - matrix:
         generators:
-          # Cluster-level info (e.g., cluster server, namespace)
+          # Cluster-level info (e.g., cluster server)
           - git:
               repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
               revision: HEAD
               files:
-                - path: environments/dev/*/clusterconfig.json
+                - path: environments/dev/cluster1/clusterconfig.json
           # Service-level config, which includes clusterName to match
           - git:
               repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
               revision: HEAD
               files:
-                - path: environments/dev/*/service*config.json
+                - path: environments/dev/cluster1/service*config.json
   template:
     metadata:
       name: '{{clusterName}}-{{name}}'
