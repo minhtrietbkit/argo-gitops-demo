@@ -24,6 +24,8 @@ spec:
     metadata:
       name: '{{clusterName}}-{{name}}'
       namespace: argocd
+      annotations:
+        argocd.argoproj.io/sync-wave: '{{syncWave}}'
     spec:
       project: default
       sources:

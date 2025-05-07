@@ -5,5 +5,6 @@
   "path": "helm-charts/details",
   "namespace": "default",
   "valueFilePath": "$values/environments/dev/cluster1/env.yaml",
-  "valueFileRepo": "https://github.com/minhtrietbkit/argo-gitops-demo"
+  "valueFileRepo": "https://github.com/minhtrietbkit/argo-gitops-demo",
+  "syncWave": "-10"
 }
