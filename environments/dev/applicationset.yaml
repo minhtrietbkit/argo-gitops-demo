@@ -23,23 +23,14 @@ spec:
     metadata:
       name: '{{clusterName}}-{{serviceName}}'
       namespace: argocd
-      annotations:
-        argocd.argoproj.io/sync-wave: '{{syncWave}}'
     spec:
       project: default
       sources:
-        - repoURL: '{{repo}}'
-          targetRevision: '{{targetRevision}}'
-          path: '{{manifestsPath}}'
-          helm:
-            valueFiles:
-              - '{{valueFilePath}}'
-        - repoURL: '{{valueFileRepo}}'
+        - repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
           targetRevision: HEAD
-          ref: values
+          path: manifests/argocd
       destination:
-        server: '{{clusterHost}}'
-        namespace: '{{namespace}}'
+        server: "https://kubernetes.default.svc"
       syncPolicy:
         syncOptions:
           - ServerSideApply=true
