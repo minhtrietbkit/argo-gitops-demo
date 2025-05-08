@@ -10,14 +10,15 @@ spec:
         revision: HEAD
         files:
           - path: "environments/dev/debug/service_service_1_config.json"
-        pathParamPrefix: "cluster"
+        #pathParamPrefix: "cluster"
 
   template:
     metadata:
-      name: '{{.cluster.path.path}}'
+      name: '{{path.basename}}'
       namespace: argocd
       labels:
         debug: "true"
+        debug-msg: '{{.path.basename}}'
       annotations:
         argocd.argoproj.io/sync-wave: '{{syncWave}}'
     spec:
@@ -33,5 +34,5 @@ spec:
           targetRevision: HEAD
           ref: values
       destination:
-        server: 'in-cluster'
+        server: 'https://kubernetes.default.svc'
         namespace: 'argocd'

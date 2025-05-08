@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: dev2
+  name: dev
   namespace: argocd
 spec:
   generators:
@@ -29,22 +29,26 @@ spec:
 #              pathParamPrefix: "service"
     - matrix:
         generators:
-          - list:
-              elements:
-                - epath: cluster
-                - epath: cluster2
           - git:
               repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
               revision: HEAD
               files:
-                - path: "environments/dev/{{.epath}}/service_details_config.json"
-              pathParamPrefix: "service"
+                - path: "environments/**/clusterconfig.json"
+              pathParamPrefix: cluster
+          - git:
+              repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
+              revision: HEAD
+              files:
+                - path: "{{cluster.path}}/service*config.json"
+              pathParamPrefix: app
   template:
     metadata:
-      name: '{{clusterName}}-{{name}}'
+      name: '{{clusterName}}-{{serviceName}}'
       namespace: argocd
       annotations:
         argocd.argoproj.io/sync-wave: '{{syncWave}}'
+      labels:
+        debug-msg: "{{cluster.path}}"
     spec:
       project: default
       sources:

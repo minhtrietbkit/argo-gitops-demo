@@ -1,0 +1,10 @@
+{
+  "serviceName": "service_6",
+  "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
+  "targetRevision": "HEAD",
+  "manifestsPath": "helm-charts/service_2",
+  "namespace": "default",
+  "valueFilePath": "$values/environments/dev/cluster2/env.yaml",
+  "valueFileRepo": "https://github.com/minhtrietbkit/argo-gitops-demo",
+  "syncWave": "-5"
+}
