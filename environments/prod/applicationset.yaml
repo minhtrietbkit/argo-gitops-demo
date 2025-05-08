@@ -11,7 +11,7 @@ spec:
               repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
               revision: HEAD
               files:
-                - path: "environments/prod/**/clusterconfig.json"
+                - path: "environments/dev/**/clusterconfig.json"
               pathParamPrefix: cluster
           - git:
               repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
@@ -28,15 +28,13 @@ spec:
     spec:
       project: prod
       sources:
-        - repoURL: '{{ repo }}'
+        - repoURL: '{{repo}}'
           targetRevision: '{{targetRevision}}'
           path: '{{manifestsPath}}'
-          helm:
-            valueFiles:
-              - '{{valueFilePath}}'
-        - repoURL: '{{valueFileRepo}}'
-          targetRevision: HEAD
-          ref: values
       destination:
         server: '{{clusterHost}}'
         namespace: '{{namespace}}'
+      syncPolicy:
+        automated: {}
+        syncOptions:
+          - ServerSideApply=true
