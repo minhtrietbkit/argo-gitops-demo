@@ -11,14 +11,7 @@ helmCharts:
     version: 8.0.0
     releaseName: argocd
     namespace: argocd
-#    valuesInline:
-#      global:
-#        logging:
-#          level: debug
-#      configs:
-#        cm:
-#          kustomize:
-#            buildOptions: --enable-helm
+    includeCRDs: true
+
 patches:
   - path: patch/argocd-cm.yaml
-#  - path: patch/argocd-cmd-params-cm.yaml

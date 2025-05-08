@@ -10,6 +10,7 @@ helmCharts:
     version: 3.30.0
     releaseName: calico
     namespace: tigera-operator
+    includeCRDs: true
 
 patches:
   - path: patch/custom-resources.yaml
