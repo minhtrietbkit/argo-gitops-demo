@@ -13,7 +13,7 @@ spec:
               repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
               revision: HEAD
               files:
-                - path: "environments/dev/**/clusterconfig.json"
+                - path: "environments/prod/**/clusterconfig.json"
               pathParamPrefix: cluster
           - git:
               repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
