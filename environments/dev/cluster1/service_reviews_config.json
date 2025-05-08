@@ -1,10 +1,10 @@
 {
-  "serviceName": "argocd2",
+  "serviceName": "argocd",
   "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
   "targetRevision": "HEAD",
   "manifestsPath": "manifests/argocd",
   "namespace": "default",
   "valueFilePath": "$values/environments/dev/cluster1/env.yaml",
   "valueFileRepo": "https://github.com/minhtrietbkit/argo-gitops-demo",
-  "syncWave": "0"
+  "syncWave": "-5"
 }
