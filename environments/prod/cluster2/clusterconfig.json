@@ -1,4 +1,4 @@
 {
-  "clusterHost": "https://172.19.0.13:6443",
-  "clusterName": "prod-2"
+  "clusterHost": "https://172.18.0.16:6443",
+  "clusterName": "prod2"
 }
