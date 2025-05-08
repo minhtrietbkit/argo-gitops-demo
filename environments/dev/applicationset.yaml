@@ -26,6 +26,7 @@ spec:
       annotations:
         argocd.argoproj.io/sync-wave: '{{syncWave}}'
     spec:
+      project: dev
       sources:
         - repoURL: '{{repo}}'
           targetRevision: '{{targetRevision}}'
@@ -38,4 +39,3 @@ spec:
           ref: values
       destination:
         server: '{{clusterHost}}'
-        namespace: '{{namespace}}'
