@@ -31,12 +31,6 @@ spec:
         - repoURL: '{{repo}}'
           targetRevision: '{{targetRevision}}'
           path: '{{manifestsPath}}'
-          helm:
-            valueFiles:
-              - '{{valueFilePath}}'
-        - repoURL: '{{valueFileRepo}}'
-          targetRevision: HEAD
-          ref: values
       destination:
         server: '{{clusterHost}}'
         namespace: '{{namespace}}'
