@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: dev
+  name: prod
   namespace: argocd
 spec:
   generators:
@@ -11,7 +11,7 @@ spec:
               repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
               revision: HEAD
               files:
-                - path: "environments/**/clusterconfig.json"
+                - path: "environments/prod/**/clusterconfig.json"
               pathParamPrefix: cluster
           - git:
               repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
@@ -26,7 +26,7 @@ spec:
       annotations:
         argocd.argoproj.io/sync-wave: '{{syncWave}}'
     spec:
-      project: default
+      project: prod
       sources:
         - repoURL: '{{ repo }}'
           targetRevision: '{{targetRevision}}'
