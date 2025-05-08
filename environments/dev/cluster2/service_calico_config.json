@@ -3,6 +3,5 @@
   "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
   "targetRevision": "HEAD",
   "manifestsPath": "manifests/calico",
-  "namespace": "",
-  "syncWave": "-10"
+  "namespace": ""
 }

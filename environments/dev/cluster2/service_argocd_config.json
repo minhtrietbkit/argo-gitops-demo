@@ -3,6 +3,5 @@
   "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
   "targetRevision": "HEAD",
   "manifestsPath": "manifests/argocd",
-  "namespace": "argocd",
-  "syncWave": "-5"
+  "namespace": "argocd"
 }
