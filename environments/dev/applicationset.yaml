@@ -26,7 +26,6 @@ spec:
       annotations:
         argocd.argoproj.io/sync-wave: '{{syncWave}}'
     spec:
-      project: dev
       sources:
         - repoURL: '{{repo}}'
           targetRevision: '{{targetRevision}}'
