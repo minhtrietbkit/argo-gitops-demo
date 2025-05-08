@@ -35,5 +35,6 @@ spec:
         server: '{{clusterHost}}'
         namespace: '{{namespace}}'
       syncPolicy:
+        automated: {}
         syncOptions:
           - ServerSideApply=true
