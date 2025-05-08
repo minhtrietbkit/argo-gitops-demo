@@ -40,5 +40,6 @@ spec:
       destination:
         server: '{{clusterHost}}'
         namespace: '{{namespace}}'
-      syncOptions:
-        - ServerSideApply=true
+      syncPolicy:
+        syncOptions:
+          - ServerSideApply=true
