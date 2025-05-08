@@ -39,4 +39,4 @@ spec:
           ref: values
       destination:
         server: '{{clusterHost}}'
-        namespace: 'argocd'
+        namespace: '{{namespace}}'
