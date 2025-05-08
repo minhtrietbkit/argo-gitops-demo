@@ -1,0 +1,42 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: dev
+  namespace: argocd
+spec:
+  generators:
+    - matrix:
+        generators:
+          - git:
+              repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
+              revision: HEAD
+              files:
+                - path: "environments/dev/**/clusterconfig.json"
+              pathParamPrefix: cluster
+          - git:
+              repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
+              revision: HEAD
+              files:
+                - path: "{{cluster.path}}/service*config.json"
+              pathParamPrefix: app
+  template:
+    metadata:
+      name: '{{clusterName}}-{{serviceName}}'
+      namespace: argocd
+      annotations:
+        argocd.argoproj.io/sync-wave: '{{syncWave}}'
+    spec:
+      project: dev
+      sources:
+        - repoURL: '{{repo}}'
+          targetRevision: '{{targetRevision}}'
+          path: '{{manifestsPath}}'
+          helm:
+            valueFiles:
+              - '{{valueFilePath}}'
+        - repoURL: '{{valueFileRepo}}'
+          targetRevision: HEAD
+          ref: values
+      destination:
+        server: '{{clusterHost}}'
+        namespace: '{{namespace}}'

@@ -1,8 +1,8 @@
 {
-  "serviceName": "reviews",
+  "serviceName": "argocd",
   "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
   "targetRevision": "HEAD",
-  "manifestsPath": "helm-charts/reviews",
+  "manifestsPath": "manifests/argocd",
   "namespace": "default",
   "valueFilePath": "$values/environments/dev/cluster1/env.yaml",
   "valueFileRepo": "https://github.com/minhtrietbkit/argo-gitops-demo",

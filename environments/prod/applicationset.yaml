@@ -25,15 +25,12 @@ spec:
       namespace: argocd
       annotations:
         argocd.argoproj.io/sync-wave: '{{syncWave}}'
-      labels:
-        debug-msg: "{{cluster.path}}"
-        debug-msg2: "{{index cluster.path.segments 0}}"
     spec:
       project: default
       sources:
         - repoURL: '{{ repo }}'
           targetRevision: '{{targetRevision}}'
-          path: '{{path}}'
+          path: '{{manifestsPath}}'
           helm:
             valueFiles:
               - '{{valueFilePath}}'

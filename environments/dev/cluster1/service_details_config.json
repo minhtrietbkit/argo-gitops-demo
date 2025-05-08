@@ -1,8 +1,8 @@
 {
-  "serviceName": "details",
+  "serviceName": "calico",
   "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
   "targetRevision": "HEAD",
-  "manifestsPath": "helm-charts/details",
+  "manifestsPath": "manifests/calico",
   "namespace": "default",
   "valueFilePath": "$values/environments/dev/cluster1/env.yaml",
   "valueFileRepo": "https://github.com/minhtrietbkit/argo-gitops-demo",
