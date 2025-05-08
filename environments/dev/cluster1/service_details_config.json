@@ -1,10 +1,10 @@
 {
-  "serviceName": "calico",
+  "serviceName": "calico1",
   "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
   "targetRevision": "HEAD",
   "manifestsPath": "manifests/calico",
   "namespace": "default",
   "valueFilePath": "$values/environments/dev/cluster1/env.yaml",
   "valueFileRepo": "https://github.com/minhtrietbkit/argo-gitops-demo",
-  "syncWave": "-10"
+  "syncWave": "0"
 }
