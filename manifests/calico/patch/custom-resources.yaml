@@ -18,7 +18,8 @@ spec:
       encapsulation: VXLANCrossSubnet
       natOutgoing: Enabled
       nodeSelector: all()
-
+      disableBGPExport: false
+      disableNewAllocations: false
 ---
 
 # This section configures the Calico API server.
