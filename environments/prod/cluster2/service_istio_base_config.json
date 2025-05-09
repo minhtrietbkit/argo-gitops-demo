@@ -1,7 +1,0 @@
-{
-  "serviceName": "istio-base",
-  "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
-  "targetRevision": "HEAD",
-  "manifestsPath": "manifests/istio-base",
-  "namespace": "istio-system"
-}
