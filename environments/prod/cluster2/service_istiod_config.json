@@ -1,0 +1,7 @@
+{
+  "serviceName": "istiod",
+  "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
+  "targetRevision": "HEAD",
+  "manifestsPath": "manifests/istiod",
+  "namespace": "istio-system"
+}

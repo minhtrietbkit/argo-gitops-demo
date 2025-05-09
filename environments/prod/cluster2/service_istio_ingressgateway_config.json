@@ -1,0 +1,7 @@
+{
+  "serviceName": "istio-ingressgateway",
+  "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
+  "targetRevision": "HEAD",
+  "manifestsPath": "manifests/istio-ingressgateway",
+  "namespace": "istio-ingress"
+}

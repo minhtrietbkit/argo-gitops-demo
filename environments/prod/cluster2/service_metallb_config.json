@@ -1,0 +1,7 @@
+{
+  "serviceName": "metallb",
+  "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
+  "targetRevision": "HEAD",
+  "manifestsPath": "manifests/metallb/overlays/prod/cluster2",
+  "namespace": ""
+}
