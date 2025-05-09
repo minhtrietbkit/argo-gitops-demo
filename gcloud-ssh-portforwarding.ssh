@@ -1,0 +1,32 @@
+#!/bin/bash
+
+LOCAL_PORT_HTTP_1=8080
+REMOTE_HOST_IG_HTTP=172.18.1.1
+LOCAL_PORT_K8S_API1=6443
+REMOTE_PORT_K8S_API1=6443
+
+LOCAL_PORT_K8S_API2=6444
+REMOTE_PORT_K8S_API2=6444
+
+LOCAL_PORT_K8S_API3=6445
+REMOTE_PORT_K8S_API3=6445
+
+LOCAL_PORT_K8S_API4=6446
+REMOTE_PORT_K8S_API4=6446
+
+echo ------Cluster 1-------
+echo Forward local port $LOCAL_PORT_K8S_API1 to remote port REMOTE_PORT_K8S_API1 for cluster1 API Server
+gcloud compute ssh instance-2 -- -NfL $LOCAL_PORT_K8S_API1:localhost:$REMOTE_PORT_K8S_API1
+#gcloud compute ssh instance-2 -- -NfL $LOCAL_PORT_HTTP_1:$REMOTE_HOST_IG_HTTP:80
+
+echo ------Cluster 2-------
+echo Forward local port $LOCAL_PORT_K8S_API2 to remote port REMOTE_PORT_K8S_API2 for cluster2 API Server
+gcloud compute ssh instance-2 -- -NfL $LOCAL_PORT_K8S_API2:localhost:$REMOTE_PORT_K8S_API2
+
+echo ------Cluster 3-------
+echo Forward local port $LOCAL_PORT_K8S_API3 to remote port REMOTE_PORT_K8S_API3 for cluster3 API Server
+gcloud compute ssh instance-2 -- -NfL $LOCAL_PORT_K8S_API3:localhost:$REMOTE_PORT_K8S_API3
+
+echo ------Cluster 4-------
+echo Forward local port $LOCAL_PORT_K8S_API4 to remote port REMOTE_PORT_K8S_API4 for cluster4 API Server
+gcloud compute ssh instance-2 -- -NfL $LOCAL_PORT_K8S_API4:localhost:$REMOTE_PORT_K8S_API4
