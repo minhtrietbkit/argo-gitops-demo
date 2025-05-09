@@ -1,7 +1,7 @@
 {
-  "serviceName": "metallb",
+  "serviceName": "helloworld",
   "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
   "targetRevision": "HEAD",
-  "manifestsPath": "manifests/metallb/overlays/dev/cluster2",
+  "manifestsPath": "manifests/helloworld",
   "namespace": ""
 }
