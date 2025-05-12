@@ -1,5 +1,5 @@
 {
-  "serviceName": "metrics-server",
+  "serviceName": "prometheus-grafana-stack",
   "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
   "targetRevision": "monitoring",
   "manifestsPath": "manifests/prometheus-grafana-stack",
