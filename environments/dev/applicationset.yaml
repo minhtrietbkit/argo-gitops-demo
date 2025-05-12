@@ -27,10 +27,10 @@ spec:
         argocd.argoproj.io/sync-wave: '{{syncWave}}'
     spec:
       project: dev
-      sources:
-        - repoURL: '{{repo}}'
-          targetRevision: '{{targetRevision}}'
-          path: '{{manifestsPath}}'
+      source:
+        repoURL: '{{repo}}'
+        targetRevision: '{{targetRevision}}'
+        path: '{{manifestsPath}}'
       destination:
         server: '{{clusterHost}}'
         namespace: '{{namespace}}'
