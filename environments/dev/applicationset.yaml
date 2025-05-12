@@ -31,9 +31,11 @@ spec:
         repoURL: '{{repo}}'
         targetRevision: '{{targetRevision}}'
         path: '{{manifestsPath}}'
+        kustomize:
+          namespace: '{{namespace}}'
       destination:
         server: '{{clusterHost}}'
-        namespace: '{{namespace}}'
+#        namespace: '{{namespace}}'
       syncPolicy:
         automated: {}
         syncOptions:
