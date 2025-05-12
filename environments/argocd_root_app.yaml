@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
-    targetRevision: HEAD
+    targetRevision: monitoring
     path: environments
   destination:
     server: "https://kubernetes.default.svc"

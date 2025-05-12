@@ -1,7 +1,0 @@
-{
-  "serviceName": "helloworld",
-  "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
-  "targetRevision": "HEAD",
-  "manifestsPath": "manifests/helloworld",
-  "namespace": ""
-}

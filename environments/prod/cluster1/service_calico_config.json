@@ -1,7 +1,0 @@
-{
-  "serviceName": "calico",
-  "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
-  "targetRevision": "HEAD",
-  "manifestsPath": "manifests/calico",
-  "namespace": ""
-}

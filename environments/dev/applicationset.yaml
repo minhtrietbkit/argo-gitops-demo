@@ -3,15 +3,13 @@ kind: ApplicationSet
 metadata:
   name: dev
   namespace: argocd
-  annotations:
-    argocd.argoproj.io/sync-wave: "0"
 spec:
   generators:
     - matrix:
         generators:
           - git:
               repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
-              revision: HEAD
+              revision: monitoring
               files:
                 - path: "environments/dev/**/clusterconfig.json"
               pathParamPrefix: cluster
