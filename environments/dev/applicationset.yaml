@@ -35,7 +35,7 @@ spec:
           namespace: '{{namespace}}'
       destination:
         server: '{{clusterHost}}'
-#        namespace: '{{namespace}}'
+        namespace: '{{namespace}}'
       syncPolicy:
         automated: {}
         syncOptions:
