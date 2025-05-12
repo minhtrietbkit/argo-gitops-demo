@@ -9,4 +9,7 @@ helmCharts:
     version: 3.12.2
     releaseName: metrics-server
     includeCRDs: true
+    valuesInline:
+      args:
+        - "--kubelet-insecure-tls"
 
