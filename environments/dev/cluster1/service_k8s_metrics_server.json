@@ -1,0 +1,7 @@
+{
+  "serviceName": "metrics-server",
+  "repo": "https://github.com/minhtrietbkit/argo-gitops-demo",
+  "targetRevision": "monitoring",
+  "manifestsPath": "manifests/k8s_metric_server",
+  "namespace": "kube-system"
+}
