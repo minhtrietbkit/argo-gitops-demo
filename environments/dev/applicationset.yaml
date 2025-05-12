@@ -15,7 +15,7 @@ spec:
               pathParamPrefix: cluster
           - git:
               repoURL: https://github.com/minhtrietbkit/argo-gitops-demo
-              revision: HEAD
+              revision: monitoring
               files:
                 - path: "{{cluster.path}}/service*config.json"
               pathParamPrefix: app
